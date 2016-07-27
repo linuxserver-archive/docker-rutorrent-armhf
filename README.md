@@ -49,6 +49,7 @@ In this instance `PUID=1001` and `PGID=1001`. To find yours use `id user` as bel
 
 ## Setting up the application 
 `IMPORTANT... THIS IS THE ARMHF VERSION`
+
 Webui can be found at `<your-ip>:80` , configuration files are in /config/rtorrent.
 
 `** Important note for unraid users or those running a webserver on port 80, change port 80 assignment 
