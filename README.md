@@ -50,13 +50,12 @@ In this instance `PUID=1001` and `PGID=1001`. To find yours use `id user` as bel
 ## Setting up the application 
 `IMPORTANT... THIS IS THE ARMHF VERSION`
 
-Webui can be found at `<your-ip>:80` , configuration files are in /config/rtorrent.
+Webui can be found at `<your-ip>:80` , configuration files for rtorrent are in /config/rtorrent and for the webui in /config/rutorrent/settings.
 
-`** Important note for unraid users or those running a webserver on port 80, change port 80 assignment 
-**`
+`Settings, changed by the user through the "Settings" panel in ruTorrent, are valid until rtorrent restart. After which all settings will be set according to the rtorrent config file (/config/rtorrent/rtorrent.rc),this is a limitation of the actual apps themselves.`
 
-`** The Port Assignments and configuration folder structure has been changed from the previous ubuntu based 
-versions of this container and we recommend a clean install **`
+** Important note for user running services such as a webserver on port 80, change port 80 assignment **
+
 
 ## Info
 
@@ -64,7 +63,4 @@ versions of this container and we recommend a clean install **`
 * To monitor the logs of the container in realtime: `docker logs -f rutorrent`
 
 ## Versions
-
-+ **26.07.16:** Rebase to alpine.
-+ **08.03.16:** Intial Release. 
-
++ **26.07.16:** Intial Release.
