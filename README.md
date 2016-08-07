@@ -56,6 +56,8 @@ Webui can be found at `<your-ip>:80` , configuration files for rtorrent are in /
 
 ** Important note for user running services such as a webserver on port 80, change port 80 assignment **
 
+`** It should also be noted that this container when run will create subfolders ,completed, incoming, sessions and watched in the /downloads volume.**`
+
 
 ## Info
 
