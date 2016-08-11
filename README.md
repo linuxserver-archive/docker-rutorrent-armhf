@@ -65,4 +65,5 @@ Webui can be found at `<your-ip>:80` , configuration files for rtorrent are in /
 * To monitor the logs of the container in realtime: `docker logs -f rutorrent`
 
 ## Versions
++ **11.08.16:** Import latest changes from alpine version.
 + **26.07.16:** Intial Release.
