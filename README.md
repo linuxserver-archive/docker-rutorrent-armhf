@@ -7,6 +7,8 @@ The [LinuxServer.io](https://linuxserver.io) team brings you another container r
 
 # lsioarmhf/rutorrent
 
+[![Docker Pulls](https://img.shields.io/docker/pulls/mashape/kong.svg?maxAge=2592000)](https://hub.docker.com/r/lsioarmhf/rutorrent/)
+
 Popular rtorrent client with a webui for ease of use. [Rutorrent](https://github.com/Novik/ruTorrent)
 
 ## Usage
