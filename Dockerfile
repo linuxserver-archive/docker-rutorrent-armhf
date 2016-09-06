@@ -2,9 +2,9 @@ FROM lsioarmhf/base.alpine
 MAINTAINER sparklyballs
 
 # package version
-ARG MEDIAINF_VER="0.7.85"
-ARG RUTORRENT_VER="3.7"
+ARG MEDIAINF_VER="0.7.87"
 
+# install runtime packages
 RUN \
  apk add --no-cache \
 	ca-certificates \
@@ -22,7 +22,7 @@ RUN \
 	zip && \
 
  apk add --no-cache \
-	--repository http://nl.alpinelinux.org/alpine/edge/testing \
+	--repository http://nl.alpinelinux.org/alpine/edge/community \
 	php7 \
 	php7-cgi \
 	php7-fpm \
@@ -32,7 +32,7 @@ RUN \
 # install webui
  curl -o \
  /tmp/rutorrent.zip -L \
-	"http://dl.bintray.com/novik65/generic/ruTorrent-${RUTORRENT_VER}.zip" && \
+	"https://github.com/Novik/ruTorrent/archive/master.zip" && \
  unzip -qq /tmp/rutorrent.zip -d /tmp && \
  mkdir -p \
 	/usr/share/webapps/rutorrent \
@@ -67,7 +67,6 @@ RUN \
  curl -o \
  /tmp/mediainfo.tar.gz -L \
 	"http://mediaarea.net/download/binary/mediainfo/${MEDIAINF_VER}/MediaInfo_CLI_${MEDIAINF_VER}_GNU_FromSource.tar.gz" && \
-
  mkdir -p \
 	/tmp/libmediainfo \
 	/tmp/mediainfo && \
@@ -94,9 +93,9 @@ RUN \
  rm -rf \
 	/tmp/*
 
-# add local files
+# add local files
 COPY root/ /
 
-# ports and volumes
+# ports and volumes
 EXPOSE 80
 VOLUME /config /downloads
