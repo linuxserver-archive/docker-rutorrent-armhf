@@ -2,7 +2,7 @@ FROM lsiobase/alpine.armhf
 MAINTAINER sparklyballs
 
 # package version
-ARG MEDIAINF_VER="0.7.87"
+ARG MEDIAINF_VER="0.7.88"
 
 # install runtime packages
 RUN \
@@ -30,17 +30,17 @@ RUN \
 	php7-pear && \
 
 # install webui
- curl -o \
- /tmp/rutorrent.zip -L \
-	"https://github.com/Novik/ruTorrent/archive/master.zip" && \
- unzip -qq /tmp/rutorrent.zip -d /tmp && \
  mkdir -p \
 	/usr/share/webapps/rutorrent \
 	/defaults/rutorrent-conf && \
- mv /tmp/ruTorrent-master/conf/* \
+ curl -o \
+ /tmp/rutorrent.tar.gz -L \
+	"https://github.com/Novik/ruTorrent/archive/master.tar.gz" && \
+ tar xf \
+ /tmp/rutorrent.tar.gz -C \
+	/usr/share/webapps/rutorrent --strip-components=1 && \
+ mv /usr/share/webapps/rutorrent/conf/* \
 	/defaults/rutorrent-conf/ && \
- cp -r /tmp/ruTorrent-master/* \
-	/usr/share/webapps/rutorrent/ && \
  rm -rf \
 	/defaults/rutorrent-conf/users \
 	/tmp/*
