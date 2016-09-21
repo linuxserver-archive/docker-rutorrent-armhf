@@ -19,6 +19,7 @@ RUN \
 	tar \
 	unrar \
 	unzip \
+	wget \
 	zip && \
 
  apk add --no-cache \
