@@ -30,24 +30,7 @@ RUN \
 	php7-json  \
 	php7-pear && \
 
-# install webui
- mkdir -p \
-	/usr/share/webapps/rutorrent \
-	/defaults/rutorrent-conf && \
- curl -o \
- /tmp/rutorrent.tar.gz -L \
-	"https://github.com/Novik/ruTorrent/archive/master.tar.gz" && \
- tar xf \
- /tmp/rutorrent.tar.gz -C \
-	/usr/share/webapps/rutorrent --strip-components=1 && \
- mv /usr/share/webapps/rutorrent/conf/* \
-	/defaults/rutorrent-conf/ && \
- rm -rf \
-	/defaults/rutorrent-conf/users \
-	/tmp/*
-
 # install build packages
-RUN \
  apk add --no-cache --virtual=build-dependencies \
 	autoconf \
 	automake \
@@ -61,7 +44,22 @@ RUN \
 	ncurses-dev \
 	openssl-dev && \
 
-# fetch and unpack source
+# install webui
+ mkdir -p \
+	/usr/share/webapps/rutorrent \
+	/defaults/rutorrent-conf && \
+ curl -o \
+ /tmp/rutorrent.tar.gz -L \
+	"https://github.com/Novik/ruTorrent/archive/master.tar.gz" && \
+ tar xf \
+ /tmp/rutorrent.tar.gz -C \
+	/usr/share/webapps/rutorrent --strip-components=1 && \
+ mv /usr/share/webapps/rutorrent/conf/* \
+	/defaults/rutorrent-conf/ && \
+ rm -rf \
+	/defaults/rutorrent-conf/users && \
+
+# compile mediainfo packages
  curl -o \
  /tmp/libmediainfo.tar.gz -L \
 	"http://mediaarea.net/download/binary/libmediainfo0/${MEDIAINF_VER}/MediaInfo_DLL_${MEDIAINF_VER}_GNU_FromSource.tar.gz" && \
@@ -75,8 +73,6 @@ RUN \
 	/tmp/libmediainfo --strip-components=1 && \
  tar xf /tmp/mediainfo.tar.gz -C \
 	/tmp/mediainfo --strip-components=1 && \
-
-# compile mediainfo packages
  cd /tmp/libmediainfo && \
 	./SO_Compile.sh && \
  cd /tmp/libmediainfo/ZenLib/Project/GNU/Library && \
