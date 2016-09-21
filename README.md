@@ -77,7 +77,7 @@ Webui can be found at `<your-ip>:80` , configuration files for rtorrent are in /
 
 ## Versions
 
-+ **11.09.16:** Bump mediainfo, reorg dockerfile, add full wget package.
++ **21.09.16:** Bump mediainfo, reorg dockerfile, add full wget package.
 + **11.09.16:** Add layer badges to README.
 + **06.09.16:** Add badges to README.
 + **11.08.16:** Import latest changes from alpine version.
