@@ -67,8 +67,9 @@ Webui can be found at `<your-ip>:80` , configuration files for rtorrent are in /
 
 ** Important note for user running services such as a webserver on port 80, change port 80 assignment **
 
-`** It should also be noted that this container when run will create subfolders ,completed, incoming, sessions and watched in the /downloads volume.**`
+`** It should also be noted that this container when run will create subfolders ,completed, incoming and watched in the /downloads volume.**`
 
+Umask can be set in the /config/rtorrent/rtorrent.rc file by changing value in `system.umask.set` 
 
 ## Info
 
@@ -77,7 +78,8 @@ Webui can be found at `<your-ip>:80` , configuration files for rtorrent are in /
 
 ## Versions
 
-+ **21.09.16:** Fix umask.
++ **04.10.16:** Remove redundant sessions folder.
++ **30.09.16:** Fix umask.
 + **21.09.16:** Bump mediainfo, reorg dockerfile, add full wget package.
 + **11.09.16:** Add layer badges to README.
 + **06.09.16:** Add badges to README.
