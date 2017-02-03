@@ -1,4 +1,4 @@
-FROM lsiobase/alpine.armhf
+FROM lsiobase/alpine.armhf:3.5
 MAINTAINER sparklyballs
 
 # set version label
@@ -9,7 +9,7 @@ LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DA
 # package version
 ARG MEDIAINF_VER="0.7.91"
 
-# install runtime packages
+# install runtime packages
 RUN \
  apk add --no-cache \
 	ca-certificates \
@@ -99,9 +99,9 @@ RUN \
 # fix logrotate
  sed -i "s#/var/log/messages {}.*# #g" /etc/logrotate.conf
 
-# add local files
+# add local files
 COPY root/ /
 
-# ports and volumes
+# ports and volumes
 EXPOSE 80
 VOLUME /config /downloads
