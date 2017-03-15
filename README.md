@@ -2,6 +2,8 @@
 [forumurl]: https://forum.linuxserver.io
 [ircurl]: https://www.linuxserver.io/irc/
 [podcasturl]: https://www.linuxserver.io/podcast/
+[appurl]: https://github.com/Novik/ruTorrent
+[hub]: https://hub.docker.com/r/lsioarmhf/rutorrent/
 
 [![linuxserver.io](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/linuxserver_medium.png)][linuxserverurl]
 
@@ -12,13 +14,10 @@ The [LinuxServer.io][linuxserverurl] team brings you another container release f
 
 # lsioarmhf/rutorrent
 [![](https://images.microbadger.com/badges/version/lsioarmhf/rutorrent.svg)](https://microbadger.com/images/lsioarmhf/rutorrent "Get your own version badge on microbadger.com")[![](https://images.microbadger.com/badges/image/lsioarmhf/rutorrent.svg)](http://microbadger.com/images/lsioarmhf/rutorrent "Get your own image badge on microbadger.com")[![Docker Pulls](https://img.shields.io/docker/pulls/lsioarmhf/rutorrent.svg)][hub][![Docker Stars](https://img.shields.io/docker/stars/lsioarmhf/rutorrent.svg)][hub][![Build Status](http://jenkins.linuxserver.io:8080/buildStatus/icon?job=Dockers/LinuxServer.io-armhf/lsioarmhf-rutorrent)](http://jenkins.linuxserver.io:8080/job/Dockers/job/LinuxServer.io-armhf/job/lsioarmhf-rutorrent/)
-[hub]: https://hub.docker.com/r/lsioarmhf/rutorrent/
-
 
 Popular rtorrent client with a webui for ease of use. [Rutorrent](https://github.com/Novik/ruTorrent)
 
-[![rutorrent](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/rutorrent.jpg)][rutorrenturl]
-[rutorrenturl]: https://github.com/Novik/ruTorrent
+[![rutorrent](https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/rutorrent.jpg)][appurl]
 
 ## Usage
 
