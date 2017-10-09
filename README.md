@@ -99,6 +99,7 @@ peer_exchange = no
 
 ## Versions
 
++ **28.05.17:** Fix permissions on secondary temp folder of nginx.
 + **30.05.17:** Rebase to alpine 3.6
 + **03.05.17:** Fix log permissions.
 + **18.03.17:** Note in readme about disabling dht in some circumstances.
