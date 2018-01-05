@@ -1,2 +1,5 @@
 #!/usr/bin/with-contenv bash
-rtorrent s6-setuidgid abc /usr/bin/rtorrent -n -o import=/config/rtorrent/rtorrent.rc
+
+screen -D -m -S \
+rtorrent s6-setuidgid abc /usr/bin/rtorrent \
+-n -o import=/config/rtorrent/rtorrent.rc

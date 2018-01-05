@@ -28,6 +28,7 @@ RUN \
 	php7-pear \
 	rtorrent \
 	screen \
+	sox \
 	tar \
 	unrar \
 	unzip \
