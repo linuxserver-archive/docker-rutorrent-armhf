@@ -99,6 +99,7 @@ peer_exchange = no
 
 ## Versions
 
++ **10.01.18:** Rebase to alpine 3.7
 + **30.10.17:** Mediainfo moved from testing to community repo.
 + **10.10.17:** Use repo version of mediainfo to shorten build time.
 + **28.05.17:** Fix permissions on secondary temp folder of nginx.
