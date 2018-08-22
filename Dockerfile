@@ -1,4 +1,4 @@
-FROM lsiobase/alpine.armhf:3.7
+FROM lsiobase/alpine.armhf:3.8
 
 # set version label
 ARG BUILD_DATE
@@ -6,11 +6,11 @@ ARG VERSION
 LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 LABEL maintainer="sparklyballs"
 
-# copy patches
+# copy patches
 COPY patches/ /defaults/patches/
 
 RUN \
- echo "**** install packages ****" && \
+ echo "**** install runtime packages ****" && \
  apk add --no-cache \
 	ca-certificates \
 	curl \
@@ -59,9 +59,9 @@ RUN \
 	/etc/nginx/conf.d/default.conf \
 	/tmp/*
 
-# add local files
+# add local files
 COPY root/ /
 
-# ports and volumes
+# ports and volumes
 EXPOSE 80
 VOLUME /config /downloads
