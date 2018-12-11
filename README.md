@@ -1,3 +1,5 @@
+THIS IMAGE IS DEPRECATED. PLEASE USE THE MULTI-ARCH IMAGES AT `linuxserver/rutorrent`
+
 [linuxserverurl]: https://linuxserver.io
 [forumurl]: https://forum.linuxserver.io
 [ircurl]: https://www.linuxserver.io/irc/
